@@ -1,6 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'jest-extended';
-import * as Logger from '@deity/falcon-logger';
 import { GraphQLResolveInfo } from 'graphql';
 import Extension from './Extension';
 import ApiDataSource from './ApiDataSource';

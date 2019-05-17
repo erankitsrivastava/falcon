@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemedComponentProps } from '@deity/falcon-ui';
 import { FilterOption } from './FiltersDataProvider';
 import { FilterItemLayout, SelectedFilterItem } from './FilterItem';
-import { FilterItemsList } from './FilterItemsList';
+import { FilterItemList } from './FilterItemList';
 
 export type SingleFilterProps = {
   options: FilterOption[];
@@ -18,7 +18,7 @@ export const SingleFilter: React.SFC<SingleFilterProps & ThemedComponentProps> =
   const selectedOption = selected !== undefined ? options.find(x => x.value === selected) : undefined;
 
   return (
-    <FilterItemsList {...rest as any}>
+    <FilterItemList {...rest as any}>
       {selectedOption && <SelectedFilterItem onClick={() => onChange()}>{selectedOption!.title}</SelectedFilterItem>}
       {!selectedOption &&
         options.map(x => (
@@ -26,6 +26,6 @@ export const SingleFilter: React.SFC<SingleFilterProps & ThemedComponentProps> =
             {x.title} ({x.count})
           </FilterItemLayout>
         ))}
-    </FilterItemsList>
+    </FilterItemList>
   );
 };

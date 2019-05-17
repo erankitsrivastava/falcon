@@ -14,23 +14,6 @@
   resolved "https://registry.npmjs.org/@apollographql/graphql-playground-html/-/graphql-playground-html-1.6.6.tgz#022209e28a2b547dcde15b219f0c50f47aa5beb3"
   integrity sha512-lqK94b+caNtmKFs5oUVXlSpN3sm5IXZ+KfhMxOtr0LR2SqErzkoJilitjDvJ1WbjHlxLI7WtCjRmOLdOGJqtMQ==
 
-"@babel/cli@7.1.5":
-  version "7.1.5"
-  resolved "https://registry.npmjs.org/@babel/cli/-/cli-7.1.5.tgz#4ccf0a8cdabeefdd8ce955384530f050935bc4d7"
-  integrity sha512-zbO/DtTnaDappBflIU3zYEgATLToRDmW5uN/EGH1GXaes7ydfjqmAoK++xmJIA+8HfDw7UyPZNdM8fhGhfmMhw==
-  dependencies:
-    commander "^2.8.1"
-    convert-source-map "^1.1.0"
-    fs-readdir-recursive "^1.1.0"
-    glob "^7.0.0"
-    lodash "^4.17.10"
-    mkdirp "^0.5.1"
-    output-file-sync "^2.0.0"
-    slash "^2.0.0"
-    source-map "^0.5.0"
-  optionalDependencies:
-    chokidar "^2.0.3"
-
 "@babel/cli@7.2.3":
   version "7.2.3"
   resolved "https://registry.npmjs.org/@babel/cli/-/cli-7.2.3.tgz#1b262e42a3e959d28ab3d205ba2718e1923cfee6"
@@ -5628,7 +5611,7 @@ credit-card-type@6.3.0:
   resolved "https://registry.npmjs.org/credit-card-type/-/credit-card-type-6.3.0.tgz#6e6c13e7e592f83b067c24429486a4f250eaa030"
   integrity sha1-bmwT5+WS+DsGfCRClIak8lDqoDA=
 
-cross-env@^5.2.0:
+cross-env@5.2.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/cross-env/-/cross-env-5.2.0.tgz#6ecd4c015d5773e614039ee529076669b9d126f2"
   integrity sha512-jtdNFfFW1hB7sMhr/H6rW1Z45LFqyI431m3qU6bFXcQ3Eh7LtBuG3h74o7ohHZ3crrRkkqHlo4jYHFPcjroANg==

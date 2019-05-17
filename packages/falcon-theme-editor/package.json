@@ -4,56 +4,40 @@
   "version": "0.1.4",
   "homepage": "https://falcon-ui.docs.deity.io/",
   "repository": "https://github.com/deity-io/falcon/tree/master/packages/falcon-theme-editor",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/falcon-theme-editor.cjs.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "source": "src/index.ts",
   "sideEffects": false,
-  "publishConfig": {
-    "access": "public"
-  },
   "files": [
     "dist",
     "src"
   ],
-  "peerDependencies": {
-    "@deity/falcon-ui": "^0.0.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
-  },
   "scripts": {
-    "clean": "rimraf dist",
-    "prepare": "npm run clean && npm run build:esm && npm run build:cjs && npm run build:tsDeclarations",
-    "build:tsDeclarations": "tsc",
-    "build:esm": "babel src -d dist -x .ts,.tsx -s",
-    "build:cjs": "rollup -c",
-    "watch": "babel src -d dist -x .ts,.tsx -s --watch"
-  },
-  "devDependencies": {
-    "@babel/cli": "7.2.3",
-    "@babel/core": "7.2.2",
-    "@babel/plugin-proposal-class-properties": "7.3.0",
-    "@babel/plugin-proposal-object-rest-spread": "7.3.2",
-    "@babel/plugin-transform-runtime": "7.2.0",
-    "@babel/preset-env": "7.3.1",
-    "@babel/preset-react": "7.0.0",
-    "@babel/preset-typescript": "7.1.0",
-    "@types/react": "16.7.20",
-    "@types/react-dom": "16.0.11",
-    "babel-plugin-annotate-pure-calls": "0.4.0",
-    "babel-plugin-module-resolver": "3.1.1",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "rimraf": "2.6.3",
-    "rollup": "0.66.4",
-    "rollup-plugin-babel": "4.0.3",
-    "rollup-plugin-node-resolve": "3.4.0",
-    "typescript": "3.2.1"
+    "prepare": "npm run clean && npm run build",
+    "clean": "falcon-scripts clean",
+    "build": "falcon-scripts build",
+    "watch": "falcon-scripts watch"
   },
   "dependencies": {
     "@babel/runtime": "7.3.1",
     "deep-object-diff": "^1.1.0",
     "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@deity/falcon-scripts": "0.0.1",
+    "@types/react": "16.7.20",
+    "@types/react-dom": "16.0.11",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "peerDependencies": {
+    "@deity/falcon-ui": "^0.2.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
   },
   "gitHead": "d8cd5eede81220aa29563275dcf35448611cc194"
 }

@@ -2,12 +2,11 @@ import React from 'react';
 import { themed } from '../theme';
 import { Icon } from './Icon';
 
-const CheckboxInnerDOM = (
-  props: React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {
-    invalid: boolean;
-    icon: JSX.Element;
-  }
-) => {
+type CheckboxInnerDOMProps = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {
+  invalid: boolean;
+  icon: JSX.Element;
+};
+const CheckboxInnerDOM = (props: CheckboxInnerDOMProps) => {
   const { className, icon, invalid, ...rest } = props;
 
   return (

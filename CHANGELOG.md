@@ -4,6 +4,22 @@
 
 Versions marked with a number and date (e.g. Falcon Client v0.1.0 (2018-10-05)) are already released and available via npm. Versions without a date are not released yet.
 
+## Falcon vNEXT
+
+### Falcon Server vNext
+
+- added ability to cache GQL resolvers by tags ([#421](https://github.com/deity-io/falcon/pull/421))
+
+### Falcon Scripts v0.0.1
+
+- initial release
+
+### Falcon E-commerce UI Kit v0.4.1 (2019-04-11)
+
+- feat: (Breaking change) corrected names for collections `[noun]sList` --> `[noun]List` ([#427](https://github.com/deity-io/falcon/pull/427))
+
+---
+
 ## Falcon v1.0
 
 ### Falcon Magento2 API v0.5.0 (2019-04-11)

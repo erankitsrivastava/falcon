@@ -2,7 +2,7 @@ import React from 'react';
 import { Label, Checkbox } from '@deity/falcon-ui';
 import { FilterOption } from './FiltersDataProvider';
 import { FilterItemLayout } from './FilterItem';
-import { FilterItemsList } from './FilterItemsList';
+import { FilterItemList } from './FilterItemList';
 
 export type MultipleFilterProps = {
   options: FilterOption[];
@@ -20,7 +20,7 @@ export const MultipleFilter: React.SFC<MultipleFilterProps> = ({ options, select
   };
 
   return (
-    <FilterItemsList>
+    <FilterItemList>
       {options.map(x => (
         <FilterItemLayout key={x.value}>
           <Checkbox
@@ -33,6 +33,6 @@ export const MultipleFilter: React.SFC<MultipleFilterProps> = ({ options, select
           </Label>
         </FilterItemLayout>
       ))}
-    </FilterItemsList>
+    </FilterItemList>
   );
 };

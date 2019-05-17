@@ -22,7 +22,7 @@ export type SortOrderDropdownProps<TItem extends { name: string } = SortOrder> =
 export const SortOrderDropdown: React.SFC<SortOrderDropdownProps> = ({ items, value, onChange }) => (
   <SortOrderDropdownLayout>
     <Text mr="sm">
-      <T id="productsList.sort.title" />
+      <T id="productList.sort.title" />
     </Text>
     <Box display="flex">
       <Dropdown css={{ width: '100%', minWidth: 200 }} onChange={onChange}>

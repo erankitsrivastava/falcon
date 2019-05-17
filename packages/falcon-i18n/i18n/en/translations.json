@@ -64,7 +64,7 @@
     "noImage": "New product picture is on the way",
     "imageAlt": "Gallery item"
   },
-  "productsList": {
+  "productList": {
     "pagination": {
       "showingOutOf": "Showing {{itemsCount}} products out of {{totalItems}}",
       "showMore": "Show more products"
@@ -157,7 +157,7 @@
   "newCustomer": {
     "title": "New Customers",
     "benefitsHeader": "Creating an account has many benefits:",
-    "benefitsList": ["check out faster", "keep more than one address", "track orders and more"],
+    "benefitList": ["check out faster", "keep more than one address", "track orders and more"],
     "createAnAccount": "Create an account"
   },
   "account": {
@@ -179,7 +179,7 @@
     "editCustomerLink": "Edit",
     "changePasswordLink": "Change password"
   },
-  "ordersList": {
+  "orderList": {
     "title": "Orders",
     "link": "Orders",
     "idLabel": "Order #",

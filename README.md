@@ -31,7 +31,7 @@ Falcon was built with the **F.I.R.E.** principal in mind:
 - Service worker to provide application caching and PWA features such as offline capabilities and add to homescreen
 - Falcon's architecture allows it to be very modular, lightweight and scalable
 
-These are just a couple of advantages and use-cases, feel free to ask anything in the official slack channel [slack.deity.io](slack.deity.io)
+These are just a couple of advantages and use-cases, feel free to ask anything in the official slack channel [slack.deity.io](https://slack.deity.io)
 
 ### Start developing right away
 

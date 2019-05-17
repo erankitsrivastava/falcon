@@ -43,13 +43,13 @@ export class AddressQuery extends Query<AddressData> {
   };
 }
 
-export type AddressesListData = {
+export type AddressListData = {
   addresses: {
     items: AddressData[];
   };
 };
 
-export const GET_ADDRESSES_LIST = gql`
+export const GET_ADDRESS_LIST = gql`
   query Addresses {
     addresses {
       items {
@@ -71,8 +71,8 @@ export const GET_ADDRESSES_LIST = gql`
   }
 `;
 
-export class AddressesListQuery extends Query<AddressesListData> {
+export class AddressListQuery extends Query<AddressListData> {
   static defaultProps = {
-    query: GET_ADDRESSES_LIST
+    query: GET_ADDRESS_LIST
   };
 }

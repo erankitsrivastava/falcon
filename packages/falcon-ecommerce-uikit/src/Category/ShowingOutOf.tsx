@@ -4,6 +4,6 @@ import { T } from '@deity/falcon-i18n';
 
 export const ShowingOutOf: React.SFC<{ itemsCount: number; totalItems: number }> = ({ itemsCount, totalItems }) => (
   <Text>
-    <T id="productsList.pagination.showingOutOf" {...{ itemsCount, totalItems }} />
+    <T id="productList.pagination.showingOutOf" {...{ itemsCount, totalItems }} />
   </Text>
 );

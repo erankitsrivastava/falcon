@@ -13,7 +13,7 @@ import {
   SortOrderDropdown,
   getFiltersData,
   FiltersSummary,
-  ProductsList,
+  ProductList,
   ShowMore,
   Responsive,
   Sidebar,
@@ -83,7 +83,7 @@ const CategoryPage = ({ id }) => (
               )}
               <Box gridArea={CategoryArea.content}>
                 <FiltersSummary data={filtersData} />
-                <ProductsList products={items} />
+                <ProductList products={items} />
               </Box>
               <FlexLayout gridArea={CategoryArea.footer} flexDirection="column" alignItems="center">
                 {pagination.nextPage && <Divider />}

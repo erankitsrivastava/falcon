@@ -46,7 +46,7 @@
     "noImage": "New product picture is on the way",
     "imageAlt": "Gallery item"
   },
-  "productsList": {
+  "productList": {
     "pagination": {
       "showingOutOf": "Showing {{itemsCount}} products out of {{totalItems}}",
       "showMore": "Show more products"
@@ -91,7 +91,7 @@
   "newCustomer": {
     "title": "Nieuwe Klanten",
     "benefitsHeader": "Het maken van een account heeft veel voordelen:",
-    "benefitsList": ["check sneller", "bewaar meer dan één adres", "volg bestellingen en meer"],
+    "benefitList": ["check sneller", "bewaar meer dan één adres", "volg bestellingen en meer"],
     "createAnAccount": "Create an account"
   }
 }

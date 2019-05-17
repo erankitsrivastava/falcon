@@ -3,10 +3,10 @@ import { Link as RouterLink } from 'react-router-dom';
 import { T, I18n } from '@deity/falcon-i18n';
 import { H1, H2, Box, Link, Icon, Button, Divider, FlexLayout } from '@deity/falcon-ui';
 import {
-  AddressesListQuery,
+  AddressListQuery,
   AddressCardLayout,
   AddressDetails,
-  AddressesListLayout,
+  AddressListLayout,
   getAddressType,
   RemoveAddressMutation
 } from '@deity/falcon-ecommerce-uikit';
@@ -16,7 +16,7 @@ const AddressBook = () => (
     <H1>
       <T id="addressBook.title" />
     </H1>
-    <AddressesListQuery>
+    <AddressListQuery>
       {({ addresses: { items } }) => {
         const billing = items.find(x => x.defaultBilling);
         const shipping = items.find(x => x.defaultShipping);
@@ -28,7 +28,7 @@ const AddressBook = () => (
         return (
           <React.Fragment>
             {anyDefaults && (
-              <AddressesListLayout my="md">
+              <AddressListLayout my="md">
                 {defaultsEqual ? (
                   <DefaultAddressCard address={billing} />
                 ) : (
@@ -37,7 +37,7 @@ const AddressBook = () => (
                     {shipping && <DefaultAddressCard address={shipping} />}
                   </React.Fragment>
                 )}
-              </AddressesListLayout>
+              </AddressListLayout>
             )}
             {anyDefaults && anyRest && <Divider />}
             {anyRest && (
@@ -45,14 +45,14 @@ const AddressBook = () => (
                 <H2>
                   <T id="addressBook.sectionTitle_other" />
                 </H2>
-                <AddressesListLayout gridTemplateColumns={{ md: 'repeat(3, 1fr)' }}>
+                <AddressListLayout gridTemplateColumns={{ md: 'repeat(3, 1fr)' }}>
                   {rest.map(x => (
                     <AddressCardLayout key={x.id}>
                       <AddressDetails {...x} />
                       <AddressActions addressId={x.id} />
                     </AddressCardLayout>
                   ))}
-                </AddressesListLayout>
+                </AddressListLayout>
               </Box>
             )}
             <FlexLayout flexDirection="column" alignItems="center" p="sm">
@@ -63,7 +63,7 @@ const AddressBook = () => (
           </React.Fragment>
         );
       }}
-    </AddressesListQuery>
+    </AddressListQuery>
   </Box>
 );
 

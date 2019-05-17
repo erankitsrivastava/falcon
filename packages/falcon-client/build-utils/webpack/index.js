@@ -96,8 +96,7 @@ module.exports.build = async () => {
     const options = {
       env: process.env.NODE_ENV,
       publicPath: process.env.PUBLIC_PATH || '/',
-      paths,
-      isCI: process.env.CI && (typeof process.env.CI !== 'string' || process.env.CI.toLowerCase() !== 'false')
+      paths
     };
 
     const previousBuildSizes = await measureFileSizesBeforeBuild(paths.appBuildPublic);
@@ -108,11 +107,11 @@ module.exports.build = async () => {
     // (asset manifest file with the correct hashes on file names BEFORE we can start the server compiler).
 
     const clientConfig = createConfig('web', options, falconConfig);
-    const clientCompilation = await webpackCompileAsync(clientConfig, options.isCI);
+    const clientCompilation = await webpackCompileAsync(clientConfig, falconConfig.CI);
 
     const serverConfig = createConfig('node', options, falconConfig);
     // ContextReplacementPlugin https://webpack.js.org/plugins/context-replacement-plugin/
-    /* const serverCompilation = */ await webpackCompileAsync(serverConfig, options.isCI);
+    /* const serverCompilation = */ await webpackCompileAsync(serverConfig, falconConfig.CI);
 
     const warnings = [...clientCompilation.warnings]; // , ...serverCompilation.warnings]
 

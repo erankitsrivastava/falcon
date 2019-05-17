@@ -16,6 +16,11 @@ export type ConfigurableContainerConstructorParams = ConfigurableConstructorPara
   extensionContainer: ExtensionContainer;
 };
 
+export type GraphQLConfig = {
+  schema: Array<string>;
+  resolvers: GraphQLResolverMap;
+};
+
 export interface ExtensionConfig {
   api?: string;
 }
@@ -60,7 +65,7 @@ export default abstract class Extension {
    * @param {string|Array<string>} typeDefs Extension's GQL schema type definitions
    * @return {object} GraphQL configuration object
    */
-  async getGraphQLConfig(typeDefs: string | Array<string> = ''): Promise<object> {
+  async getGraphQLConfig(typeDefs: string | Array<string> = ''): Promise<GraphQLConfig> {
     if (!typeDefs) {
       Logger.warn(`${this.name}: typeDefs is empty! Make sure you call "super.getGraphQLConfig(typeDefs)" properly`);
     }
@@ -90,7 +95,7 @@ export default abstract class Extension {
     });
 
     return {
-      schema: [typeDefs],
+      schema: Array.isArray(typeDefs) ? typeDefs : [typeDefs],
       resolvers
     };
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { T } from '@deity/falcon-i18n';
 import { Box, H1, H2, Text, Link, Divider, FlexLayout, GridLayout } from '@deity/falcon-ui';
-import { CustomerQuery, OrdersListQuery, NoOrders, OrdersList } from '@deity/falcon-ecommerce-uikit';
+import { CustomerQuery, OrderListQuery, NoOrders, OrderList } from '@deity/falcon-ecommerce-uikit';
 
 const Dashboard = () => (
   <GridLayout mb="md" gridGap="md">
@@ -10,7 +10,7 @@ const Dashboard = () => (
       <T id="dashboard.title" />
     </H1>
     <Box>
-      <OrdersListQuery variables={{ pagination: { perPage: 1, page: 1 } }}>
+      <OrderListQuery variables={{ pagination: { perPage: 1, page: 1 } }}>
         {({ orders: { items } }) => (
           <React.Fragment>
             <FlexLayout justifyContent="flex-start" alignItems="baseline">
@@ -23,10 +23,10 @@ const Dashboard = () => (
                 </Link>
               )}
             </FlexLayout>
-            <Box>{items.length ? <OrdersList items={items} /> : <NoOrders />}</Box>
+            <Box>{items.length ? <OrderList items={items} /> : <NoOrders />}</Box>
           </React.Fragment>
         )}
-      </OrdersListQuery>
+      </OrderListQuery>
     </Box>
     <Box>
       <FlexLayout justifyContent="flex-start" alignItems="baseline">

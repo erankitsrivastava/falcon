@@ -64,10 +64,7 @@ module.exports.category = {
   }
 };
 
-module.exports.adminToken = {
-  data: 'u04au8og2a4nheu0k59hguix7t5lqsli',
-  meta: { tags: ['ApiMagento'] }
-};
+module.exports.adminToken = 'u04au8og2a4nheu0k59hguix7t5lqsli';
 
 // query variables used to fetch these results:
 // {"categoryId":11, "includeSubcategories":true, "sortOrders":{}, "query":{"page":1} }

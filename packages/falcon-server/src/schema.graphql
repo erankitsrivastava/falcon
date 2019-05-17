@@ -1,4 +1,4 @@
-directive @cache(ttl: Int) on FIELD_DEFINITION
+directive @cache(ttl: Int, idPath: [String]) on FIELD_DEFINITION
 
 schema {
   query: Query
@@ -44,7 +44,7 @@ type Url {
   """
   Canonical URL for the found entity
   """
-  path: String!
+  path: ID!
   """
   Entity type (this is being used by Dynamic Routing)
   """

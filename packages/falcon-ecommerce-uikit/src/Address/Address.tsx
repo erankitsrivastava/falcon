@@ -50,10 +50,10 @@ export const AddressCard: React.SFC<{ address: AddressData }> = ({ address }) =>
   </AddressCardLayout>
 );
 
-export const AddressesListLayout = themed({
+export const AddressListLayout = themed({
   tag: 'ul',
   defaultTheme: {
-    addressesListLayout: {
+    addressListLayout: {
       display: 'grid',
       gridTemplateColumns: {
         xs: '1fr',

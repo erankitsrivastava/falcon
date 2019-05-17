@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, themed, ThemedComponentProps } from '@deity/falcon-ui';
 import { FilterItemLayout, SelectedFilterItem } from './FilterItem';
-import { FilterItemsList } from './FilterItemsList';
+import { FilterItemList } from './FilterItemList';
 import { SingleFilterProps } from './SingleFilter';
 
 export const ColorTile = themed<{ color: string }, any>({
@@ -31,7 +31,7 @@ export const ColorFilter: React.SFC<SingleFilterProps & ThemedComponentProps> = 
   const selectedOption = selected !== undefined ? options.find(x => x.value === selected) : undefined;
 
   return (
-    <FilterItemsList display="flex" flexWrap="wrap" {...rest as any}>
+    <FilterItemList display="flex" flexWrap="wrap" {...rest as any}>
       {selectedOption && (
         <SelectedFilterItem onClick={() => onChange()}>
           <ColorTile size="lg" color={selectedOption!.value} title={selectedOption!.title} />
@@ -43,6 +43,6 @@ export const ColorFilter: React.SFC<SingleFilterProps & ThemedComponentProps> = 
             <ColorTile size="lg" color={x!.value} title={x!.title} />
           </FilterItemLayout>
         ))}
-    </FilterItemsList>
+    </FilterItemList>
   );
 };

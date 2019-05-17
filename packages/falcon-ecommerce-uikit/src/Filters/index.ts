@@ -1,6 +1,6 @@
 export * from './FiltersDataProvider';
 export * from './FiltersSummary';
-export * from './FilterItemsList';
+export * from './FilterItemList';
 export * from './SingleFilter';
 export * from './ColorFilter';
 export * from './MultipleFilter';

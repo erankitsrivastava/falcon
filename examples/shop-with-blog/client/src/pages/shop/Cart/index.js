@@ -15,7 +15,7 @@ const cartLayout = {
   }
 };
 
-const CartItemsList = ({ items }) => (
+const CartItemList = ({ items }) => (
   <Box>
     {items.map(item => (
       <React.Fragment key={item.sku}>
@@ -25,8 +25,7 @@ const CartItemsList = ({ items }) => (
     ))}
   </Box>
 );
-
-CartItemsList.propTypes = {
+CartItemList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({}))
 };
 
@@ -39,7 +38,7 @@ const CartPage = () => (
         </H1>
         {cart.items.length > 0 ? (
           <React.Fragment>
-            <CartItemsList items={cart.items} />
+            <CartItemList items={cart.items} />
             <CartSummary totals={cart.totals} couponCode={cart.couponCode} />
             <Button as={RouterLink} to="/checkout" alignSelf="center" px="xxxl">
               <T id="cart.checkout" />

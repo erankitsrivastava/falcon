@@ -33,7 +33,7 @@ const NewCustomer = () => (
     <List>
       <I18n>
         {t =>
-          [].concat(t('newCustomer.benefitsList', { returnObjects: true })).map((x: string) => (
+          [].concat(t('newCustomer.benefitList', { returnObjects: true })).map((x: string) => (
             <ListItem key={x} display="flex" mb="sm">
               <Icon src="check" size="md" mr="xs" stroke="primaryLight" />
               {x}

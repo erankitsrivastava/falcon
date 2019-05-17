@@ -18,7 +18,7 @@ const { codes } = require('@deity/falcon-errors');
 const { Events, Cache, InMemoryLRUCache } = require('@deity/falcon-server-env');
 const GraphQLJSON = require('graphql-type-json');
 const DynamicRouteResolver = require('./resolvers/DynamicRouteResolver');
-const CacheDirective = require('./schemaDirectives/CacheDirective');
+const GraphQLCacheDirective = require('./schemaDirectives/GraphQLCacheDirective');
 
 const BaseSchema = readFileSync(resolvePath(__dirname, './schema.graphql'), 'utf8');
 
@@ -82,7 +82,7 @@ class FalconServer {
         return dataSources;
       },
       schemaDirectives: {
-        cache: CacheDirective
+        cache: GraphQLCacheDirective
       },
       formatError: error => this.formatGraphqlError(error),
       // inject session and headers into GraphQL context

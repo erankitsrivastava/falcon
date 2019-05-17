@@ -113,6 +113,7 @@ function requireOrExit(id) {
 /**
  * @typedef {object} FalconClientBuildConfig
  * @property {number} devServerPort webpack dev server port
+ * @property {boolean} CI if Continuos Integration env
  * @property {boolean} clearConsole if clear console
  * @property {boolean} useWebmanifest is process Web App Manifest
  * @property {object} i18n i18n falcon client webpack plugin configuration
@@ -132,6 +133,7 @@ function getBuildConfig(buildConfigFileName = 'falcon-client.build.config.js') {
 
   const buildConfigDefaults = {
     clearConsole: true,
+    CI: false,
     devServerPort: 3001,
     useWebmanifest: false,
     i18n: {},

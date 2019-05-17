@@ -12,12 +12,15 @@ const NormalModuleOverridePlugin = require('@deity/normal-module-override-webpac
 const errorOverlayMiddleware = require('react-dev-utils/errorOverlayMiddleware');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 const LoadablePlugin = require('@loadable/webpack-plugin');
-
 const { colors } = require('./../tools');
 const { getClientEnv } = require('./env');
 const runPlugin = require('./runPlugin');
 
 const falconClientPolyfills = require.resolve('./../../polyfills');
+
+/**
+ *  @typedef {import('../tools').FalconClientBuildConfig} FalconClientBuildConfig
+ */
 
 /**
  * Create RegExp filter based on provided modules names
@@ -112,7 +115,7 @@ function getStyleLoaders(target, env, cssLoaderOptions) {
  * Webpack configuration factory. It's the juice!
  * @param {'web' | 'node' } target target
  * @param {{ env: ('development' | 'production'), inspect: string, publicPath: string }} options environment
- * @param {object} buildConfig config
+ * @param {FalconClientBuildConfig} buildConfig config
  * @returns {object} webpack config
  */
 module.exports = (target = 'web', options, buildConfig) => {
@@ -489,7 +492,7 @@ module.exports = (target = 'web', options, buildConfig) => {
     ...config.plugins,
     new NormalModuleOverridePlugin(moduleOverride),
     new WebpackBar({
-      minimal: options.isCI,
+      minimal: buildConfig.CI,
       color: colors.deityGreen,
       name: IS_WEB ? 'client' : 'server',
       compiledIn: true

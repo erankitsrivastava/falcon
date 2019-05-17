@@ -21,7 +21,7 @@
     "apollo-env": "0.4.0",
     "config": "^2.0.1",
     "core-js": "3.0.0-beta.3",
-    "cross-env": "^5.2.0"
+    "cross-env": "5.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"

@@ -15,68 +15,20 @@
   "types": "dist/index.d.ts",
   "source": "src/index.ts",
   "sideEffects": false,
-  "jest": {
-    "globals": {
-      "ts-jest": {
-        "diagnostics": false
-      }
-    },
-    "collectCoverageFrom": [
-      "src/**/*.ts",
-      "src/**/*.tsx",
-      "!src/index.ts"
-    ],
-    "coverageReporters": [
-      "html",
-      "text",
-      "text-summary",
-      "lcov"
-    ],
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json",
-      "node"
-    ],
-    "setupTestFrameworkScriptFile": "./../../test/setupTests.js"
-  },
   "scripts": {
-    "clean": "rimraf dist",
-    "prepare": "npm run clean && npm run build:esm && npm run build:cjs && npm run build:tsDeclarations",
-    "build:tsDeclarations": "tsc",
-    "build:esm": "babel src -d dist -x .ts,.tsx -s",
-    "build:cjs": "rollup -c",
-    "watch": "babel src -d dist -x .ts,.tsx -s --watch"
+    "prepare": "npm run clean && npm run build",
+    "clean": "falcon-scripts clean",
+    "build": "falcon-scripts build",
+    "watch": "falcon-scripts watch"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.1.5",
-    "@babel/core": "7.2.2",
-    "@babel/plugin-proposal-class-properties": "7.3.0",
-    "@babel/plugin-proposal-object-rest-spread": "7.3.2",
-    "@babel/plugin-transform-runtime": "7.2.0",
-    "@babel/preset-env": "7.3.1",
-    "@babel/preset-react": "7.0.0",
-    "@babel/preset-typescript": "7.1.0",
+    "@deity/falcon-scripts": "0.0.1",
     "@deity/falcon-payment-plugin": "^0.0.1",
     "@types/react": "16.7.20",
-    "babel-plugin-annotate-pure-calls": "0.4.0",
-    "babel-plugin-module-resolver": "3.1.1",
-    "react": "^16.6.3",
-    "rimraf": "2.6.3",
-    "rollup": "0.66.4",
-    "rollup-plugin-babel": "4.0.3",
-    "rollup-plugin-commonjs": "9.1.8",
-    "rollup-plugin-node-resolve": "3.4.0",
-    "size-limit": "0.20.1",
-    "typescript": "3.2.1"
+    "react": "^16.6.3"
   },
   "peerDependencies": {
     "@deity/falcon-payment-plugin": "^0.0.1",
